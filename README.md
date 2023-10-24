@@ -13,9 +13,9 @@ PDF , WAV
 
 I DONT KNOW IF THE OTHER ONES WORK BUT ILL TEST THEM IN THE FOLLOWING DAYS (I HOPE SO)
 
-#INSTRUCTIONS
+# INSTRUCTIONS
 
-git clone https://github.com/CarlosQuintro1/FILE-CARVERX.git
-cd FILE-CARVERX/xxd-recovery
-chmod +x ./file-recovery.sh  note: I forgot to initially change the permission my bad ;)
-./file-recovery.sh -r [file]
+~git clone https://github.com/CarlosQuintro1/FILE-CARVERX.git
+~cd FILE-CARVERX/xxd-recovery
+~chmod +x ./file-recovery.sh  note: I forgot to initially change the permission my bad ;)
+~./file-recovery.sh -r [file]
