@@ -17,7 +17,8 @@ trap ctrl_c INT
 function recoverFile(){
 
 	for (( i = 0; i < "${#file_signatures[@]}"; i++ )) ; do
-
+	declare -i num
+ 
 	if xxd $1 | grep ${file_signatures[$i]} &>/dev/null; then
 
 		echo "[+]EXTENSION: ${file_signatures[$i]}"
@@ -30,9 +31,11 @@ function recoverFile(){
 		numOfBytes=$(( ${#bytes}  / 2))
 		total=$((headerNumConverted+numOfBytes))
 
-		dd if=$1 of=recoveredFile skip=$total bs=1
+		recovered_file="file$num"
+  
+		dd if=$1 of=$recovered_file skip=$total bs=1
 		echo "[+]file saved to the current directory  path $(pwd)"		
-		
+		num+=1
 	fi
 	done	
 }
